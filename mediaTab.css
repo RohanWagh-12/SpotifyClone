@@ -1,0 +1,221 @@
+@media  (max-width:900px ) {
+    .leftSection{
+     position: absolute;
+     z-index: 5;
+     transform: translateX(-110%);
+        /* transition: ease-in-out; */
+     transition-duration: .5s;
+    }
+    .homeSearch{
+      gap: 2rem;
+      
+    }
+    .homeSearch ul{
+      gap: 1rem;
+    }
+    .homeSearch ul li{
+      font-size: 1.2rem;
+    }
+
+    .libraryName{
+      font-size: 1.3rem;
+    }
+    .section1{
+      padding-top: 5px;
+    }
+    .songBox{
+      height: 5rem;
+    }
+
+    .musicIcon{
+      height: 3rem;
+      width: 3rem;
+   
+    }
+
+    .musicIcon img{
+      width: 3rem;
+    }
+
+    .musicName{
+      font-size: 1.2rem;
+      height: 3rem;
+    }
+
+    .playCircle{
+      padding: 0.8rem;
+    }
+
+    .playCircle img{
+      width: 1.2rem;
+    }
+
+    .rightSection{
+        width: 100vw;
+        transition-duration: .5s;
+        margin: 0;
+    }
+    .arrows{
+      display: none;
+    }
+
+    .logoAndLeftArrow > :nth-child(2){
+        display: flex;
+      }
+
+     .hamburger{
+        display: flex;
+     } 
+
+     .mainSpotify{
+      display: flex;
+     }
+
+     .playBar,.musicTime,.seekSection1{
+        width: 80vw;
+     }
+
+     
+     
+     .cardContainer{
+      min-width: 80vw;
+      gap: 2.2rem;
+      align-content: center;
+      padding-left: 4rem;
+      justify-content: space-evenly;
+     }
+
+     .card1{
+        width:285px;
+        height: 400px;
+        padding-inline: 0;
+     }
+     .title{
+        width: 280px;
+        height: 2.6rem;
+        font-size: 2rem; 
+     }
+
+     .description{
+        width: 280px;
+        font-size: 22px; 
+     }
+     .image{
+        width: 280px;
+        height: 280px;
+     }
+
+     .header{
+      font-size:2.2rem ;
+      padding-left: 3rem;
+     }
+
+     .mainFooter{
+      padding-left: 4rem !important;
+     }
+
+    .footerLinks{
+      font-size: 1.4rem !important;
+    }
+
+
+     .footerColumn{
+      min-width: 18rem;
+     }
+     
+     
+     .footerColumn h3{
+      font-size: 2rem;
+     }
+
+     .footerImage{
+      height: 4rem !important;
+      width: 4rem !important;
+     }
+
+     .footerImage img{
+      width: 2.3rem;
+     }
+
+     .footer2Section1 li{
+      font-size: 1.4rem;
+     }
+     
+     .footer2Section2{
+      font-size: 1.4rem;
+     }
+    
+     .seekBar{
+      gap: 1rem;
+     }
+
+     .seekBar img{
+      height: 3rem;
+      width: 3rem;
+     }
+
+     .seekBarDetails{
+      width: 70%;
+      height: 4.9rem;
+      
+     }
+
+     .seekBarImage{
+      width: 4rem;
+      height: 4rem;
+     }
+
+     .seekBarImage img{
+      width: 4rem;
+      height: 4rem;
+      object-fit: cover;
+     }
+     
+     
+
+     .seekBarSongName{
+      font-size: 2rem;
+      height: 2rem;
+      margin-bottom: 1rem;
+     }
+
+     .seekBarFolderName{
+      font-size: 1.5rem;
+     }
+
+     .startTime,.endTime{
+      font-size: 2rem;
+     }
+
+    .seekBar .playCircle{
+      width: 4rem;
+      height: 4rem;
+      align-items: center;
+      justify-content: center;
+     }
+
+     .playBar{
+      height: 0.6rem;
+     }
+
+     .greenBar{
+      height: 0.6rem;
+     }
+
+     .sliderCircle{
+      height: 1.3rem;
+      width: 1.3rem;
+     }
+}
+
+/* @media  (max-width:767px) {
+
+    .volume{
+        display: none;
+    }
+
+    .seekBarDetails{
+        width:100% ;
+    }
+} */
+
