@@ -50,7 +50,7 @@ function playNextSong(){
     let currentIndex = songs.indexOf(currentSong.src)
     if(currentIndex < songs.length-1){
     let PlayNextSong = songs[currentIndex+1].split("/").pop()    
-    playMusic(`./${currentFolder}/${PlayNextSong}`)
+    playMusic(`${currentFolder}/${PlayNextSong}`)
     console.log(songs[currentIndex+1])
     applyWhiteBorder(songs[currentIndex+1])
     pastMusic = (songs[currentIndex+1]).split("/")[(songs[currentIndex+1]).split("/").length - 1].replaceAll("%20"," ")
@@ -59,7 +59,7 @@ function playNextSong(){
     }
     else{
       let PlayNextSong = songs[0].split("/").pop()    
-      playMusic(`./${currentFolder}/${PlayNextSong}`)
+      playMusic(`${currentFolder}/${PlayNextSong}`)
       applyWhiteBorder(songs[0])
       pastMusic = (songs[0]).split("/")[(songs[0]).split("/").length - 1].replaceAll("%20"," ")
 
@@ -76,7 +76,7 @@ function applyWhiteBorder(toThisSongBox) {
 
 async function getSongs(folder){
 
-    let data =await fetch(`./songs/${folder}/`)
+    let data =await fetch(`https://github.com/RohanWagh-12/SpotifyClone/blob/main/songs/${folder}/`)
 
     let response = await data.text()
 
@@ -164,7 +164,7 @@ const playMusic = (songname)=>{
   })
   
   // let audio = new Audio(songname)
-  currentSong.src = `./songs/${songname}`
+  currentSong.src = `https://github.com/RohanWagh-12/SpotifyClone/blob/main/songs/${songname}`
   currentSong.play()
   document.querySelector(".mainPlayBtn").src ="images/pause.svg"
   document.querySelector(".seekBarSongName").innerHTML=decodeURI(songname.split("/")[songname.split("/").length-1])
@@ -189,7 +189,7 @@ async function displayAlbums() {
     if(e.href.includes("songs/")){
       console.log(e.href.split("/").slice(-1)[0])
       let folderName = e.href.split("/").slice(-1)[0] //getting the foldername 
-      let data =await fetch(`./songs/${folderName}/info.json`)
+      let data =await fetch(`https://github.com/RohanWagh-12/SpotifyClone/blob/main/songs/${folderName}/info.json`)
       let response = await data.json()
       console.log(response)
 
@@ -206,7 +206,7 @@ async function displayAlbums() {
                      
               //start here image is remaininig to fetch from cover.jpg
               //4:30
-      document.querySelectorAll(".image")[folderNumber].style.cssText=`background-image: url("./songs/${folderName}/cover.jpg");
+      document.querySelectorAll(".image")[folderNumber].style.cssText=`background-image: url("https://github.com/RohanWagh-12/SpotifyClone/blob/main/songs/${folderName}/cover.jpg");
       background-repeat : no-repeat;
       background-size:cover;`
 
@@ -292,14 +292,14 @@ async function main() {
       let currentIndex = songs.indexOf(currentSong.src)
       if(currentIndex==0){
       let PlayPreviousSong = songs[songs.length - 1].split("/").pop()
-      playMusic(`./${currentFolder}/${PlayPreviousSong}`)
+      playMusic(`${currentFolder}/${PlayPreviousSong}`)
       applyWhiteBorder(songs[songs.length - 1])
       pastMusic = (songs[songs.length - 1]).split("/")[(songs[songs.length - 1]).split("/").length - 1].replaceAll("%20"," ")
       console.log(pastMusic)
       }
       else{
         let PlayPreviousSong = songs[currentIndex-1].split("/").pop()
-        playMusic(`./${currentFolder}/${PlayPreviousSong}`)
+        playMusic(`${currentFolder}/${PlayPreviousSong}`)
         applyWhiteBorder(songs[currentIndex-1])
         pastMusic = (songs[currentIndex-1]).split("/")[(songs[currentIndex-1]).split("/").length - 1].replaceAll("%20"," ")
  
@@ -341,7 +341,7 @@ async function main() {
         // console.log(item.currentTarget.dataset.folder)
         seekBarFolderName=item.currentTarget.getElementsByClassName("title")[0].innerHTML
         // console.log("This is item ",seekBarFolderName)
-        await getSongs(`./${item.currentTarget.dataset.folder}`)
+        await getSongs(`${item.currentTarget.dataset.folder}`)
         document.querySelector(".leftSection").style.cssText=` transform: translateX(0);
     /* transition: ease-in-out; */
  transition-duration: .5s;`
