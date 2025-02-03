@@ -1,0 +1,2 @@
+# SpotifyClone
+Practice Project
