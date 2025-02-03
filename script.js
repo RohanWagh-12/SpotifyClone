@@ -76,7 +76,7 @@ function applyWhiteBorder(toThisSongBox) {
 
 async function getSongs(folder){
 
-    let data =await fetch(`https://github.com/RohanWagh-12/SpotifyClone/blob/main/songs/${folder}/`)
+    let data =await fetch(`./songs/${folder}/`)
 
     let response = await data.text()
 
@@ -164,7 +164,7 @@ const playMusic = (songname)=>{
   })
   
   // let audio = new Audio(songname)
-  currentSong.src = `https://github.com/RohanWagh-12/SpotifyClone/blob/main/songs/${songname}`
+  currentSong.src = `./songs/${songname}`
   currentSong.play()
   document.querySelector(".mainPlayBtn").src ="images/pause.svg"
   document.querySelector(".seekBarSongName").innerHTML=decodeURI(songname.split("/")[songname.split("/").length-1])
@@ -189,7 +189,7 @@ async function displayAlbums() {
     if(e.href.includes("songs/")){
       console.log(e.href.split("/").slice(-1)[0])
       let folderName = e.href.split("/").slice(-1)[0] //getting the foldername 
-      let data =await fetch(`https://github.com/RohanWagh-12/SpotifyClone/blob/main/songs/${folderName}/info.json`)
+      let data =await fetch(`./songs/${folderName}/info.json`)
       let response = await data.json()
       console.log(response)
 
@@ -206,7 +206,7 @@ async function displayAlbums() {
                      
               //start here image is remaininig to fetch from cover.jpg
               //4:30
-      document.querySelectorAll(".image")[folderNumber].style.cssText=`background-image: url("https://github.com/RohanWagh-12/SpotifyClone/blob/main/songs/${folderName}/cover.jpg");
+      document.querySelectorAll(".image")[folderNumber].style.cssText=`background-image: url("./songs/${folderName}/cover.jpg");
       background-repeat : no-repeat;
       background-size:cover;`
 
